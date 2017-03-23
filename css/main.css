@@ -4,6 +4,18 @@
   font-weight: 700;
   src: url("../fonts/MontserratBold/MontserratBold.eot?#iefix") format("embedded-opentype"), url("../fonts/MontserratBold/MontserratBold.woff") format("woff"), url("../fonts/MontserratBold/MontserratBold.ttf") format("truetype"); }
 
+@font-face {
+  font-family: "HelveticaNeueLTStdHv";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/HelveticaNeueLTStdHv/HelveticaNeueLTStdHv.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueLTStdHv/HelveticaNeueLTStdHv.woff") format("woff"), url("../fonts/HelveticaNeueLTStdHv/HelveticaNeueLTStdHv.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "HelveticaNeueLTStdLt";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/HelveticaNeueLTStdLt/HelveticaNeueLTStdLt.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueLTStdLt/HelveticaNeueLTStdLt.woff") format("woff"), url("../fonts/HelveticaNeueLTStdLt/MontserratBold.ttf") format("truetype"); }
+
 /* General reset */
 *::-webkit-input-placeholder {
   color: #aeaeae;
@@ -205,3 +217,53 @@ body {
     font-size: 14px;
     font-family: "MontserratBold";
     color: #9aa29e; }
+
+.slide-main {
+  overflow: hidden; }
+  .slide-main img {
+    width: 100%;
+    height: auto; }
+
+.slide-box {
+  position: absolute;
+  width: 442px;
+  height: 448px;
+  left: -62px;
+  bottom: -62px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 100%;
+  color: #fff;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.slide-box_holder {
+  width: 65%;
+  padding-left: 30px; }
+
+.slide-box_heading {
+  font-family: "HelveticaNeueLTStdHv";
+  font-size: 47px; }
+  .slide-box_heading span {
+    font-family: "HelveticaNeueLTStdLt"; }
+
+.slide-box_subhead {
+  font-size: 16px; }
