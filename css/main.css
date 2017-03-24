@@ -277,10 +277,10 @@ body {
   -ms-flex-align: center;
   align-items: center; }
   .nav-item:hover img {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1); }
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9); }
   .nav-item:hover strong {
     background-size: 100% 1px; }
   .nav-item img {
