@@ -344,10 +344,6 @@ body
   line-height: 17px
 
 .top-banner_item
-  overflow: hidden
-  -webkit-transition: all .4s
-  -o-transition: all .4s
-  transition: all .4s
   margin-bottom: 15px
   padding: 0
   &:last-child
@@ -355,11 +351,14 @@ body
   img
     width: 100%
     height: auto
-  &:hover .top-banner_heading
-    -webkit-transform: translateY(-100%)
-    -ms-transform: translateY(-100%)
-    -o-transform: translateY(-100%)
-    transform: translateY(-100%)
+
+  .top-banner_inner
+    position: relative
+    -webkit-transition: all .4s ease .1s
+    -o-transition: all .4s ease .1s
+    transition: all .4s ease .1s
+    &:hover
+      box-shadow: 2px 2px 5px rgba(0,0,0,.3)
 
 .top-banner_head-second
   background-color: rgba(145,193,190,.8)

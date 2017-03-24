@@ -376,10 +376,6 @@ body {
   line-height: 17px; }
 
 .top-banner_item {
-  overflow: hidden;
-  -webkit-transition: all .4s;
-  -o-transition: all .4s;
-  transition: all .4s;
   margin-bottom: 15px;
   padding: 0; }
   .top-banner_item:last-child {
@@ -387,11 +383,13 @@ body {
   .top-banner_item img {
     width: 100%;
     height: auto; }
-  .top-banner_item:hover .top-banner_heading {
-    -webkit-transform: translateY(-100%);
-    -ms-transform: translateY(-100%);
-    -o-transform: translateY(-100%);
-    transform: translateY(-100%); }
+  .top-banner_item .top-banner_inner {
+    position: relative;
+    -webkit-transition: all .4s ease .1s;
+    -o-transition: all .4s ease .1s;
+    transition: all .4s ease .1s; }
+    .top-banner_item .top-banner_inner:hover {
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); }
 
 .top-banner_head-second {
   background-color: rgba(145, 193, 190, 0.8);
@@ -547,6 +545,8 @@ body {
     -o-transition: all .4s;
     transition: all .4s;
     border-radius: 2px; }
+    .nav-item img {
+      display: none; }
     .nav-item:hover {
       background-color: rgba(248, 194, 122, 0.2); }
     .nav-item:last-child {
@@ -560,8 +560,12 @@ body {
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 980px) {
   .top-banner_inner {
-    position: relative;
-    margin: 0 4px; } }
+    position: relative; }
+  .top-banner_item {
+    width: 32%;
+    margin-right: 2%; }
+    .top-banner_item:last-child {
+      margin-right: 0; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -577,12 +581,40 @@ body {
   .header-top_right {
     margin-bottom: 20px; }
   .top-banner_heading {
-    font-size: 19px;
-    line-height: 21px; } }
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-  /**/ }
+  .top-banner_item {
+    width: 100%; }
+  .top-banner_heading {
+    font-size: 18px;
+    line-height: 20px; }
+  .slide-box_holder {
+    width: 100%;
+    margin: 0; }
+  .slide-box_one {
+    -ms-align-items: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    border-radius: 0; }
+  .slide-box_heading {
+    font-size: 8vw;
+    line-height: 1.2;
+    margin-bottom: 1vh; }
+  .slide-box_subhead {
+    font-size: 4vw;
+    line-height: 1.2; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
