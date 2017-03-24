@@ -50,13 +50,12 @@ a
 
 a:hover, a:active, a:focus
   text-decoration: none
-  outline: none
 
-button, button:active, button:focus
-  outline: none
+button, button:hover, button:active, button:focus
+  outline: 0 !important
 
-button, button:hover, button:active
-  outline: none
+.btn:hover, .btn:active, .btn:focus
+  color: #fff
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
@@ -77,10 +76,6 @@ body
   overflow-x: hidden
 
 /* General reset end */
-
-.main-head
-  margin-bottom: 17px
-
 .logo
   margin-top: -20px
   img
@@ -99,19 +94,31 @@ body
     line-height: 1
 
 .header-top_right
-  padding-top: 26px
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  -ms-align-items: stretch
+  align-items: stretch
+  -webkit-flex-direction: row
+  -moz-flex-direction: row
+  -ms-flex-direction: row
+  -o-flex-direction: row
+  flex-direction: row
 
 .search-hold
   position: relative
-  input
+
+.search-field
     background-color: #fff
     color: #000
-    border: 1px solid #e4e4e4
+    border: 1px solid #e5e5e5
     border-radius: 10px 100px 100px 10px
     text-indent: 18px
     width: 100%
-    font-size: 18px
-    line-height: 41px
+    line-height: 20px;
+    padding: 14px 0 9px;
     outline: none
 
 .btn-search
@@ -126,16 +133,38 @@ body
   &:hover, &:active
     background: #b5d2d0 url('../img/ico-search.png') no-repeat 50% 50%
     outline: none
+  &:hover
+    color: #fff
+    background-color: #b9d6d4
+  &:active, &:focus
+    background-color: #acc6c4
+    color: #fff
 
 .btn-log-reg
+  display: inline-block
   background-color: $scandal
   color: #fff
   text-transform: uppercase
   font-size: 12px
   font-weight: 700
-  margin-top: 10px
   border-radius: 3px
-  line-height: 15px
+  line-height: 17px
+  padding: 7px 7px 5px
+  &:hover
+    color: #fff
+    background-color: #b9d6d4
+  &:active, &:focus
+    background-color: #acc6c4
+    color: #fff
+
+.log-reg
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  -ms-align-items: center
+  align-items: center
 
 .carello
   display: inline-block
@@ -143,30 +172,53 @@ body
   line-height: 23px
   font-weight: 700
   padding-left: 23px
-  margin-top: 14px
   background: url("../img/basket.png") no-repeat 0 0
   margin-right: 5px
   text-transform: uppercase
   color: #a3a2a2
 
+.cart-block
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  -ms-align-items: center
+  align-items: center
+  -webkit-justify-content: flex-start
+  -moz-justify-content: flex-start
+  -ms-justify-content: flex-start
+  -o-justify-content: flex-start
+  justify-content: flex-start
+
 .prod-count
   display: inline-block
   width: 41px
   height: 41px
+  padding: 15px
+  line-height: 0
   background-color: $scandal
   text-align: center
   color: #fff
-  border-radius: 100px
+  border-radius: 100%
   font-weight: 700
+  &:hover
+    color: #fff
+    background-color: #b9d6d4
+  &:active, &:focus
+    background-color: #acc6c4
+    color: #fff
 
-.main-wrap
+.main-top
+  padding: 30px 0 15px
+  margin-bottom: 15px
   background-color: #fff
-  padding: 30px 30px 35px 30px
 
 .main-nav
-  padding-bottom: 17px
+  overflow: hidden
+  margin: 0 30px 11px
+  padding-bottom: 11px
   border-bottom: 1px solid #e6e6e6
-  margin-bottom: 24px
   display: -webkit-flex
   display: -moz-flex
   display: -ms-flex
@@ -177,6 +229,9 @@ body
   -ms-justify-content: space-between
   -o-justify-content: space-between
   justify-content: space-between
+  -webkit-transition: all .5s
+  -o-transition: all .5s
+  transition: all .5s
 
 .nav-item
   display: -webkit-flex
@@ -191,24 +246,52 @@ body
   justify-content: space-between
   -ms-align-items: center
   align-items: center
+  &:hover
+    img
+      -webkit-transform: scale(1.1)
+      -ms-transform: scale(1.1)
+      -o-transform: scale(1.1)
+      transform: scale(1.1)
+    strong
+      background-size: 100% 1px
   img
+    -webkit-transition: all .4s ease .4s
+    -o-transition: all .4s ease .4s
+    transition: all .4s ease .4s
     margin-right: 13px
   strong
+    display: inline-block
     text-transform: uppercase
     font-size: 14px
     font-family: "MontserratBold"
     color: #9aa29e
+    background: -webkit-linear-gradient(left, #9aa29e, #9aa29e) no-repeat 50% 100%
+    background: -o-linear-gradient(left, #9aa29e, #9aa29e) no-repeat 50% 100%
+    background: -moz-linear-gradient(left, #9aa29e, #9aa29e) no-repeat 50% 100%
+    background: -ms-linear-gradient(left, #9aa29e, #9aa29e) no-repeat 50% 100%
+    background: linear-gradient(left, #9aa29e, #9aa29e) no-repeat 50% 100%
+    background-size: 0 1px
+    -webkit-transition: all .4s ease .1s
+    -o-transition: all .4s ease .1s
+    transition: all .4s ease .1s
 
-.slide-main
+.slider-row
   overflow: hidden
+  margin: 0 15px
+  background-color: #f8f7ee
+  padding: 12px 0 15px
+
+.slide-one
+  overflow: hidden
+  position: relative
   img
     width: 100%
     height: auto
 
-.slide-box
+.slide-box_one
   position: absolute
-  width: 442px
-  height: 448px
+  width: 412px
+  height: 377px
   left: -62px
   bottom: -62px
   background: rgba(0,0,0,.5);
@@ -219,30 +302,143 @@ body
   display: -ms-flex
   display: -o-flex
   display: flex
-  -ms-align-items: center
-  align-items: center
-  -webkit-flex-direction: column
-  -moz-flex-direction: column
-  -ms-flex-direction: column
-  -o-flex-direction: column
-  flex-direction: column
-  -webkit-justify-content: center
-  -moz-justify-content: center
-  -ms-justify-content: center
-  -o-justify-content: center
-  justify-content: center
+  -ms-align-items: flex-end
+  align-items: flex-end
+  -webkit-justify-content: flex-start
+  -moz-justify-content: flex-start
+  -ms-justify-content: flex-start
+  -o-justify-content: flex-start
+  justify-content: flex-start
 
 .slide-box_holder
   width: 65%
-  padding-left: 30px
+  margin: 0 0 95px 105px
+
 
 .slide-box_heading
   font-family: "HelveticaNeueLTStdHv"
   font-size: 47px
+  line-height: 47px
+  margin-bottom: 10px
   span
     font-family: "HelveticaNeueLTStdLt"
 
 .slide-box_subhead
   font-size: 16px
+  line-height: 18px
 
+.top-banner_heading
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  width: 100%
+  text-transform: uppercase
+  padding: 7px 12px
+  background-color: rgba(249,157,58,.8)
+  color: #fff
+  -webkit-transition: all .4s
+  -o-transition: all .4s
+  transition: all .4s
+  font-size: 15px
+  line-height: 17px
 
+.top-banner_item
+  overflow: hidden
+  -webkit-transition: all .4s
+  -o-transition: all .4s
+  transition: all .4s
+  margin-bottom: 15px
+  padding: 0
+  &:last-child
+    margin-bottom: 0
+  img
+    width: 100%
+    height: auto
+  &:hover .top-banner_heading
+    -webkit-transform: translateY(-100%)
+    -ms-transform: translateY(-100%)
+    -o-transform: translateY(-100%)
+    transform: translateY(-100%)
+
+.top-banner_head-second
+  background-color: rgba(145,193,190,.8)
+  text-align: right
+
+.page-top
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  -ms-align-items: center
+  align-items: center
+
+.mobile-nav
+  display: none
+
+.mobile-nav_row
+  border-bottom: 1px solid #e6e6e6
+  margin: 0 15px 12px
+  padding: 0 10px 12px 5px
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  -webkit-justify-content: space-between
+  -moz-justify-content: space-between
+  -ms-justify-content: space-between
+  -o-justify-content: space-between
+  justify-content: space-between
+  -ms-align-items: center
+  align-items: center
+  cursor: pointer
+  display: none
+
+.btn-menu_arrow
+  display: inline-block
+  width: 13px
+  height: 7px
+  background: url('../img/btn-menu-arrow.png') no-repeat 0 0
+
+.btn-menu_holder
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  -ms-align-items: center
+  align-items: center
+  strong
+    font-size: 17px
+    line-height: 19px
+    color: #9aa29e
+    font-family: "MontserratBold"
+    text-transform: uppercase
+
+.btn-menu
+  width: 41px
+  height: 41px
+  background: -webkit-linear-gradient(left, #fff, #fff) no-repeat 8px 19px, -webkit-linear-gradient(left, #fff, #fff) no-repeat 14px 19px,  #fac074
+  background-size: 4px 4px, 18px 4px
+  border-radius: 100%
+  border: none
+  position: relative
+  margin-right: 10px
+  &:before,
+  &:after
+    background: -webkit-linear-gradient(left, #fff, #fff) no-repeat 0 0, -webkit-linear-gradient(left, #fff, #fff) no-repeat 6px 0
+    background-size: 4px 4px, 18px 4px
+    left: 8px
+    content: ''
+    display: block
+    width: 23px
+    height: 4px
+    position: absolute
+  &:before
+    top: 11px
+  &:after
+    top: 27px
+
+@import "media"
