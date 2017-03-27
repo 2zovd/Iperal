@@ -76,17 +76,48 @@
 	.main-slider
 		margin-bottom: 7px
 
+	.product-slider_wrap .slick-arrow
+		-webkit-transform: rotate(180deg)
+		-ms-transform: rotate(180deg)
+		-o-transform: rotate(180deg)
+		transform: rotate(180deg)
+		left: 0
+		bottom: 50%
+	.product-slider_wrap .slick-next
+		-webkit-transform: rotate(0deg)
+		-ms-transform: rotate(0deg)
+		-o-transform: rotate(0deg)
+		transform: rotate(0deg)
+		left: auto
+		right: 0
 /* Medium Devices, Desktops */
+@media only screen and (max-width : 990px)
+	.recipes-wrap
+		display: block
+
 @media only screen and (max-width : 980px)
 	.top-banner_inner
 	  position: relative
-
 	.top-banner_item
 		width: 32%
 		margin-right: 2%
 		&:last-child
-			margin-right: 0		
-
+			margin-right: 0
+	.offer-right_content
+		padding-right: 0
+	.sale-mark
+		width: 82px
+		height: 82px
+		margin-left: -9px
+		margin-top: -10px
+	.product-slider_box
+		&:hover .sale-mark
+			-webkit-transform: scale(0.9) rotate(-10deg)
+			-ms-transform: scale(0.9) rotate(-10deg)
+			-o-transform: scale(0.9) rotate(-10deg)
+			transform: scale(0.9) rotate(-10deg)
+	.product-slider_box
+		margin-top: 13px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	.header-top_right,
@@ -104,6 +135,23 @@
 		font-size: 13px
 		line-height: 15px
 		text-align: center
+	.offer-box,
+	.offer-row
+		display: block
+	.offer-right_content
+		padding: 0
+	.offer-wrap
+		padding: 0 15px
+	.offer-left_hold,
+	.offer-right_hold
+		margin: 0
+	.main
+		padding: 0 15px
+	.recipe-right
+		padding: 0
+		margin-bottom: 35px
+	.recipe-img
+		margin-bottom: 25px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -133,6 +181,10 @@
 	.slide-box_subhead 
 		font-size: 4vw
 		line-height: 1.2
+	.offer-right_hold
+		p
+			padding: 0 15px
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
