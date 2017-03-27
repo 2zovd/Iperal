@@ -867,7 +867,8 @@ h5 {
   font-size: 17px;
   line-height: 1.1;
   color: #979b97;
-  padding: 5px 0; }
+  padding: 5px 0;
+  text-indent: 2px; }
   .prod-categories a:hover {
     background-color: #ededed;
     color: #979b97; }
