@@ -867,11 +867,10 @@ h5 {
   font-size: 17px;
   line-height: 1.1;
   color: #979b97;
-  padding: 5px 0;
+  padding: 12px 0;
   text-indent: 2px; }
   .prod-categories a:hover {
-    background-color: #ededed;
-    color: #979b97; }
+    background-color: rgba(248, 194, 122, 0.2); }
 
 .contacts p {
   color: #707170; }
@@ -882,16 +881,62 @@ h5 {
 .footer-bottom-nav {
   margin-bottom: 30px; }
   .footer-bottom-nav ul li {
-    display: inline-block; }
+    float: left;
+    border-right: 1px solid #9d9d9d;
+    line-height: 0; }
+    .footer-bottom-nav ul li:last-child {
+      border-right: none; }
   .footer-bottom-nav ul a {
     display: inline-block;
     font-size: 15px;
     line-height: 1.1;
     padding: 0 5px;
-    border-right: 1px solid #9d9d9d;
     color: #9d9d9d; }
     .footer-bottom-nav ul a:hover {
       color: #8a8a8a; }
+
+.footer-recipe {
+  border-bottom: 1px solid #ededed;
+  padding: 7px 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .footer-recipe img {
+    border: 3px solid #ededed;
+    width: 100%;
+    height: auto; }
+  .footer-recipe a,
+  .footer-recipe span {
+    display: block; }
+  .footer-recipe span {
+    color: #979b97; }
+  .footer-recipe a {
+    font-weight: bold;
+    color: #707170; }
+    .footer-recipe a:hover, .footer-recipe a:active, .footer-recipe a #focus {
+      color: #000; }
+
+.footer-nav h3 {
+  font-size: 16px;
+  margin-bottom: 17px; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
@@ -975,6 +1020,7 @@ h5 {
     -o-transform: rotate(180deg);
     transform: rotate(180deg);
     left: 0;
+    right: auto;
     bottom: 50%; }
   .product-slider_wrap .slick-next {
     -webkit-transform: rotate(0deg);
@@ -982,7 +1028,13 @@ h5 {
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
     left: auto;
-    right: 0; } }
+    right: 0; }
+  .slick-arrow .fa {
+    margin: 0 5px;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 990px) {
