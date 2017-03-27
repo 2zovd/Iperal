@@ -11,7 +11,7 @@
   slidesToShow: 4,
   slidesToScroll: 1,
   arrows: true,
-  autoplay: false,
+  autoplay: true,
   nextArrow: '<button class="slick-arrow slick-prev"><i class="fa fa-caret-left" aria-hidden="true"></i></button>',
   prevArrow: '<button class="slick-arrow slick-next"><i class="fa fa-caret-left" aria-hidden="true"></i></button>',
   responsive: [
