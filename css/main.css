@@ -1078,7 +1078,10 @@ h5 {
     font-size: 4vw;
     line-height: 1.2; }
   .offer-right_hold p {
-    padding: 0 15px; } }
+    padding: 0 15px; }
+  .recipe-img,
+  .recipe-paragraph {
+    width: 100%; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
