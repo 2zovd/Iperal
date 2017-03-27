@@ -1,4 +1,4 @@
- 
+ // slick slider custimization
  $('.main-slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -34,7 +34,24 @@
 ]
 });
 
+// toggling class to drop-down nav
 
 document.getElementById('nav-drop_btn').onclick = function() {
 	document.getElementById('nav-drop').classList.toggle('active-menu');
+}
+
+document.getElementById('footer-nav-1').onclick = function() {
+    document.getElementById('footer-nav-drop-1').classList.toggle('active-drop');
+}
+
+document.getElementById('footer-nav-2').onclick = function() {
+    document.getElementById('footer-nav-drop-2').classList.toggle('active-drop');
+}
+
+document.getElementById('footer-nav-3').onclick = function() {
+    document.getElementById('footer-nav-drop-3').classList.toggle('active-drop');
+}
+
+document.getElementById('footer-nav-4').onclick = function() {
+    document.getElementById('footer-nav-drop-4').classList.toggle('active-drop');
 }

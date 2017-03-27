@@ -1,5 +1,4 @@
 @import "fonts"
-@import "libs"
 @import "vars"
 
 /* General reset */
@@ -25,8 +24,6 @@
   -moz-box-sizing: border-box
   -ms-box-sizing: border-box
   -o-box-sizing: border-box
-
-*
   &:focus
     outline: 0 !important
 
@@ -234,9 +231,9 @@ body
   -ms-justify-content: space-between
   -o-justify-content: space-between
   justify-content: space-between
-  -webkit-transition: all .5s
-  -o-transition: all .5s
-  transition: all .5s
+  -webkit-transition: all .6s
+  -o-transition: all .6s
+  transition: all .6s
 
 .nav-item
   display: -webkit-flex
@@ -274,7 +271,7 @@ body
     background: -o-linear-gradient(left, #9aa29e, #9aa29e) no-repeat 50% 100%
     background: -moz-linear-gradient(left, #9aa29e, #9aa29e) no-repeat 50% 100%
     background: -ms-linear-gradient(left, #9aa29e, #9aa29e) no-repeat 50% 100%
-    background: linear-gradient(left, #9aa29e, #9aa29e) no-repeat 50% 100%
+    background: linear-gradient(to right, #9aa29e, #9aa29e) no-repeat 50% 100%
     background-size: 0 1px
     -webkit-transition: all .4s ease .1s
     -o-transition: all .4s ease .1s
@@ -566,6 +563,7 @@ h3
       -ms-transform: translateX(10px)
       -o-transform: translateX(10px)
       transform: translateX(10px)
+
 .product-slider
   text-align: center
 
@@ -593,7 +591,7 @@ h3
     &:hover
       background-color: #9cd1cd
       color: #fff
-  .slick-prev
+  .slick-next
     right: -27px
     left: auto
     -webkit-transform: rotate(180deg)
@@ -804,6 +802,7 @@ h5
   &:focus
     color: #ff9400
 
+/* footer area */
 .footer-holder
   width: 100%
   background: #fff url('../img/footer-bg.jpg') no-repeat 0 0
@@ -828,6 +827,33 @@ h5
 .contacts
   p
     color: #707170
+  .last-paragraph
+    margin-bottom: 25px
+
+.footer-social
+  a
+    display: inline-block
+    width: 42px
+    height: 42px
+    background-color: #b5d2d0
+    border-radius: 100px
+    margin-right: 5px
+    color: #fff
+    vertical-align: middle
+    text-align: center
+    font-size: 22px
+    line-height: 42px
+    -webkit-transition: all .3s ease .1s
+    -o-transition: all .3s ease .1s
+    transition: all .3s ease .1s
+    &:hover
+      -webkit-transform: scale(0.9)
+      -ms-transform: scale(0.9)
+      -o-transform: scale(0.9)
+      transform: scale(0.9)
+      background-color: #f99d1c
+    i
+      display: inline-block
 
 .footer-nav
   margin-bottom: 30px
@@ -848,7 +874,7 @@ h5
       padding: 0 5px
       color: #9d9d9d
       &:hover
-        color: #8a8a8a
+        color: #f99d1c
 
 .footer-recipe
   border-bottom: 1px solid #ededed
@@ -890,5 +916,64 @@ h5
     font-size: 16px
     margin-bottom: 17px
 
+.copyrights
+  text-align: right
+  font-size: 15px
+  color: #9d9d9d
+  font-family: $default-font
 
+.footer-heading_caret
+  display: none
+  width: 29px
+  height: 29px
+  background-color: #c4c4c4
+  border-radius: 100px
+  text-align: center
+  color: #fff
+  font-size: 15px
+  -webkit-transition: all .3s ease .2s
+  -o-transition: all .3s ease .2s
+  transition: all .3s ease .2s
+  i
+    vertical-align: middle
+
+.active-drop
+  .prod-categories,
+  .footer-recipe_wrap,
+  .prod-categories,
+  .footer-contacts_holder
+    max-height: 500px
+    opacity: 1
+
+.active-drop
+  .footer-heading_caret
+    -webkit-transform: rotate(90deg)
+    -ms-transform: rotate(90deg)
+    -o-transform: rotate(90deg)
+    transform: rotate(90deg)
+    background-color: #f99d1c
+
+.prod-categories,
+.footer-recipe_wrap,
+.prod-categories,
+.footer-contacts_holder
+  -webkit-transition: all .5s ease-in-out .2s
+  -o-transition: all .5s ease-in-out .2s
+  transition: all .5s ease-in-out .2s
+
+.footer-heading_holder
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  -webkit-justify-content: space-between
+  -moz-justify-content: space-between
+  -ms-justify-content: space-between
+  -o-justify-content: space-between
+  justify-content: space-between
+  -ms-align-items: center
+  align-items: center
+
+/* media queries */
 @import "media"
